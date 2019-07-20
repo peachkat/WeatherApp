@@ -9,14 +9,53 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  height:10px;
+  background: #FF5F6D;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFC371, #FF5F6D);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFC371, #FF5F6D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  align-items: left;
+  justify-content: left;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App-header input {
+  width: 100%;
+  height: 40px;
+  font-size: 24px;
+  font-family: Helvetica, sans-serif;
+}
+
+.App-header button {
+  height: 47px;
+  width: 80px;
+  cursor: pointer;
+  border-radius: 12px;
+  font-size: 20px;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.meme-wrap{
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  margin:3px;
+}
+.meme-wrap:hover:after{
+  content:"🔗";
+  color:rgb(187, 255, 255);
+  font-size:50px;
+  background:rgba(0,0,0,0.6);
+  position: absolute;
+  top:0; left:0; bottom:0; right:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .App-link {
