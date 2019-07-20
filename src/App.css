@@ -1,3 +1,6 @@
+
+* {cursor: url(http://cur.cursors-4u.net/games/gam-2/gam134.cur), auto !important;} 
+
 .App {
   text-align: center;
 }
@@ -39,6 +42,8 @@
   font-weight: bold;
   text-align: center;
 }
+
+
 
 .meme-wrap{
   display: inline-block;
