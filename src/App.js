@@ -20,7 +20,7 @@ class App extends React.Component {
     e.preventDefault()
     this.setState({ loading: true, weather: null })
     var key = '657d4c335154e8175a3ded8cf74ba786'
-    var url = `http://api.openweathermap.org/data/2.5/forecast?q=${this.state.text}&units=imperial&APPID=${key}`
+    var url = `https://api.openweathermap.org/data/2.5/forecast?q=${this.state.text}&units=imperial&APPID=${key}`
     var r = await fetch(url)
     var json = await r.json()
 
