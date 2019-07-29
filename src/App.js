@@ -5,6 +5,8 @@ import { Input, Button, Progress } from "antd";
 //import OutlinedInput from '@material-ui/core/OutlinedInput';
 //import TextField from '@material-ui/core/TextField';
 //import LinearProgress from '@material-ui/core/LinearProgress';
+import "antd/dist/antd.css";
+import "./index.css";
 import moment from 'moment'
 import { Bar } from 'react-chartjs-2'
 
