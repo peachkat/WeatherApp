@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
-import Button from '@material-ui/core/Button';
+//import Button from '@material-ui/core/Button';
+import { Input, Button, Progress } from "antd";
 //import OutlinedInput from '@material-ui/core/OutlinedInput';
-import TextField from '@material-ui/core/TextField';
-import LinearProgress from '@material-ui/core/LinearProgress';
+//import TextField from '@material-ui/core/TextField';
+//import LinearProgress from '@material-ui/core/LinearProgress';
 import moment from 'moment'
 import { Bar } from 'react-chartjs-2'
 
@@ -56,18 +57,26 @@ class App extends React.Component {
     return (
       <div className="App">
         <form className="App-header" onSubmit={this.onSubmit}>
-          <TextField value={text}
+        <Progress //The progress bar here is useless and only a test
+          strokeColor={{
+          from: '#108ee9',
+          to: '#87d068',
+          }}
+          percent={75}
+          status="active" //End of test progress bar
+        /> 
+          <Input value={text}
             autoFocus
-            variant="outlined"
-            label="Search for Weather"
+            size="large"
+            placeholder="Enter a city to search for weather"
             onChange={e => this.setState({ text: e.target.value })}
             style={{ width: '100%', marginLeft: 8 }}
           />
-          <Button disabled={loading || !text} variant="contained" color="primary">
+          <Button disabled={loading || !text} type="primary" icon="search">
             Search
           </Button>
         </form>
-        {loading && <LinearProgress />}
+        {loading && <Progress /> /* Actual progress bar that does not show up atm */ } 
         <main>
           {data && <Bar
             data={data}
