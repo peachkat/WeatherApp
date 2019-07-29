@@ -50,6 +50,10 @@ class App extends React.Component {
           label: 'Tempurature',
           borderWidth: 1,
           data: weather.map(w => w.main.temp), //takes temperature out of the main in JSON data
+          backgroundColor: 'rgba(132,99,255,0.2)',
+          borderColor: 'rgba(132,99,255,1)',
+          hoverBackgroundColor: 'rgba(132,99,255,0.4)',
+          hoverBorderColor: 'rgba(132,99,255,1)'
         }]
       }
     }
